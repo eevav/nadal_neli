@@ -1,0 +1,36 @@
+<!doctype html>
+	<html>
+		 <head>
+		 	<title>Soovitud arv kaste</title>
+				 <script>
+				 function Arvutaja(kihinimi, kastitekst, nuputekst, koefitsient){
+				 this.algus=function(){
+				 this.kiht=document.getElementById(kihinimi);
+				 window[kihinimi+"_kalkulaator"]=this;
+				 this.kiht.innerHTML=
+				 kastitekst+": <input type='text' id='"+kihinimi+"_kast1' /> "+
+				 "<input type='button' value='"+nuputekst+"' onClick='"+
+				 kihinimi+"_kalkulaator.arvuta();' /> "+
+				 "<span id='"+kihinimi+"_vastus'></span>";
+				 this.kast=document.getElementById(kihinimi+"_kast1");
+				 this.vastusekiht=document.getElementById(kihinimi+"_vastus");
+				 this.koefitsient=koefitsient;
+				 }
+				 this.arvuta=function(){
+				 this.vastusekiht.innerHTML=
+				 parseFloat((this.kast.value)/this.koefitsient).toFixed(2);
+				 }
+				 this.algus();
+				 }
+
+				 function lehealgus(){
+				 new Arvutaja("kiht1", "Sisesta kastide arv", "Netohinnaks", 1.2);
+				 }
+				 </script>
+		 </head>
+		 <body onload="lehealgus();">
+		 <h1>Soovitud arv kaste ja nende aritmeetiline keskmine</h1>
+		 <div id="kiht1"></div>
+
+		 </body>
+	</html>
