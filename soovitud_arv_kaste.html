@@ -24,13 +24,41 @@
 				 }
 
 				 function lehealgus(){
-				 new Arvutaja("kiht1", "Sisesta kastide arv", "Netohinnaks", 1.2);
-				 }
+				 this.layer1.innerHTML =
+            		"<div>Soovitud kastide arv:</div>" +
+	            		"<select id='createValue' onchange='window.create();'>" +
+		                "<option selected>Vali kogus</option>" +
+		                "<option value='1'>1</option>" +
+		                "<option value='2'>2</option>" +
+		                "<option value='3'>3</option>" +
+		                "<option value='4'>4</option>" +
+		                "<option value='5'>5</option>" +
+		                "<option value='6'>6</option>" +
+		                "<option value='7'>7</option>" +
+		                "<option value='8'>8</option>" +
+		                "<option value='9'>9</option>" +
+		                "<option value='10'>10</option>" +
+	            	"</select>";
+            	this.layer2.innerHTML =
+	            "<input type='button' value='Arvuta keskmine' " +
+	            "onClick='average();' /> ";
+
 				 </script>
 		 </head>
 		 <body onload="lehealgus();">
 		 <h1>Soovitud arv kaste ja nende aritmeetiline keskmine</h1>
-		 <div id="kiht1"></div>
+		 	<div id="layer0"></div>
+			<div id="layer1"></div>
+			<div id="layer2"></div>
+			<div id="layer3"></div>
+			<div id="layer4"></div>
+			<div id="layer5"></div>
+			<div id="layer6"></div>
+			<div id="layer7"></div>
+			<div id="layer8"></div>
+			<div id="layer9"></div>
+			<div id="layer10"></div>
+			<div id="layer11"></div>
 
 		 </body>
 	</html>
